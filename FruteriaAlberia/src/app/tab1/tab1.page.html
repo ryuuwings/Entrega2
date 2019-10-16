@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item><img src="assets/img/fruteria.png"></ion-item>
+ 
+  <ion-item><ion-button (click)="showList()" id="btnList">Show list of fruits</ion-button></ion-item>
+  <ion-item ><ion-label id ="labels" hidden="true">ID  NAME  PRICE</ion-label></ion-item>
+  <ion-list *ngFor="let fruit of Fruits">
+    <ion-item>
+      <label>{{fruit.id}}  {{fruit.name}}  {{fruit.price}}</label>
+    </ion-item>
+  </ion-list>
+</ion-content>
